@@ -1,10 +1,13 @@
-import NxWelcome from './nx-welcome';
+import { Canvas } from '@react-three/fiber';
 
 export function App() {
   return (
-    <div>
-      <NxWelcome title="r3f-playground" />
-    </div>
+    <Canvas camera={{ position: [3, 3, 3] }}>
+      <mesh>
+        <boxGeometry />
+        <meshNormalMaterial />
+      </mesh>
+    </Canvas>
   );
 }
 
